@@ -33,7 +33,7 @@ html,body,header,menu,footer{
   padding: 15px;
   overflow: hidden;
   background-color: white;
-  grid-area: navbar;
+
 }
 
 #navbar a {
@@ -72,7 +72,6 @@ html,body,header,menu,footer{
 	position: sticky;
 	top: 0;
   border-bottom: #1a2434;
-  grid-area: header;
   /*border-radius: 20px;*/
 }
 
@@ -94,7 +93,7 @@ html,body,header,menu,footer{
   position:static;
   margin: auto;
   border-radius: 20px;
-  grid-area: main;
+  
 
 }
 
@@ -118,19 +117,20 @@ html,body,header,menu,footer{
   position: -webkit-sticky;
 	position: sticky;
 	top: 0;
-  grid-area: escudo;
 }
 
 .aside{
 
+  flex-wrap: wrap;
   background-color: white;
   width: 100%;
   height: 100%;
   border-style:solid;
   border-color: black;
   position:static;
+  margin: auto;
   border-radius: 20px;
-  grid-area: aside;
+
 }
 
 .video-responsive {
@@ -139,14 +139,14 @@ html,body,header,menu,footer{
   padding-top: 30px; 
   height: 0;
   overflow: hidden;
-  grid-area: videos;
+
   
   }
 
 .video-responsive iframe,
 .video-responsive object,
 .video-responsive embed {
-  position: absolute;
+  position:absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -212,7 +212,7 @@ html,body,header,menu,footer{
   grid-template-columns: 5;
   grid-template-rows: 2;
   background-color: black;
-  grid-area: footer;
+  
 }
 
 .social_links{
@@ -350,22 +350,26 @@ a:hover {
 
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.5fr 2fr 5fr 0.5fr;                 
-    grid-template-areas: 'navbar'
-                        'main'
-                        'aside'
-                        'footer';
+    grid-template-rows: 0.4fr 2fr 5fr 0.4fr;                 
   }
 
+  .escudo{
+    display: none;
+  }
+  #navbar{
+    grid-column: 1/3;
+   
+  }
+  .main{
+    grid-column: 1/4;
+  }
   .wrapper_galeria {
 
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 3fr 1fr;
-    grid-template-areas: 'navbar'
-                        'slideshow-container'
-                        'footer';
+    grid-template-rows: 0.5fr 5fr 0.5fr;
   }
+
   
   .sticky{
 
@@ -390,7 +394,7 @@ a:hover {
 
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.5fr 5fr 2fr 0.5fr;                 
+    grid-template-rows: 0.5fr 4fr 3fr 0.5fr;                 
     grid-template-areas: 'navbar'
                         'aside'
                         'main'
