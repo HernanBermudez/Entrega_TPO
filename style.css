@@ -7,10 +7,10 @@ html,body,header,menu,footer{
   margin: 0px;
 }
 
-@keyframes animation_main {
+@keyframes animation_main { /* Animación*/
 
   0% {background-image: url(images/quindianos_10.jpeg);}
-  50% {background-image: url(images/quindianos_11.jpeg);}
+  40% {background-image: url(images/quindianos_11.jpeg);}
   70% {background-image: url(images/quindianos_9.jpeg);}
 
 }
@@ -19,18 +19,23 @@ html,body,header,menu,footer{
 
   display: grid;
   grid-template-columns: 4fr 2fr 4fr;
-  grid-template-rows: 1fr 11fr 2fr;
-  gap: 0px;
+  grid-template-rows: 1fr 10fr 2fr;
 }
 
-/* Style the navbar */
+.wrapper_galeria {
+
+  display: grid;
+  grid-template-columns: 4fr 2fr 4fr;
+  grid-template-rows: 1fr 10fr 2fr;
+}
+
 #navbar {
   padding: 15px;
   overflow: hidden;
   background-color: white;
+  grid-area: navbar;
 }
 
-/* Navbar links */
 #navbar a {
   padding: 10px;
   float: left;
@@ -50,7 +55,7 @@ html,body,header,menu,footer{
 	position: sticky;
 	top: 0;
 }
-/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+
 .sticky {
   position: fixed;
   top: 0;
@@ -67,6 +72,7 @@ html,body,header,menu,footer{
 	position: sticky;
 	top: 0;
   border-bottom: #1a2434;
+  grid-area: header;
   /*border-radius: 20px;*/
 }
 
@@ -74,7 +80,6 @@ html,body,header,menu,footer{
 
   display: flex;
   flex-wrap: wrap;
-  padding: 0 4px;
   grid-column: 1/3;
   background-image: url(images/quindianos_9.jpeg);
   background-size:cover;
@@ -88,7 +93,8 @@ html,body,header,menu,footer{
   animation-duration: 10s;
   position:static;
   margin: auto;
-  /*border-radius: 20px;*/
+  border-radius: 20px;
+  grid-area: main;
 
 }
 
@@ -112,19 +118,39 @@ html,body,header,menu,footer{
   position: -webkit-sticky;
 	position: sticky;
 	top: 0;
+  grid-area: escudo;
 }
 
 .aside{
 
-  display: grid;
-  grid-template-columns: 1;
-  grid-template-rows: 2;
   background-color: white;
   width: 100%;
   height: 100%;
   border-style:solid;
   border-color: black;
   position:static;
+  border-radius: 20px;
+  grid-area: aside;
+}
+
+.video-responsive {
+  position:relative;
+  padding-bottom: 56.25%; /* 16/9 ratio */
+  padding-top: 30px; 
+  height: 0;
+  overflow: hidden;
+  grid-area: videos;
+  
+  }
+
+.video-responsive iframe,
+.video-responsive object,
+.video-responsive embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .tablasub20{
@@ -186,6 +212,7 @@ html,body,header,menu,footer{
   grid-template-columns: 5;
   grid-template-rows: 2;
   background-color: black;
+  grid-area: footer;
 }
 
 .social_links{
@@ -306,23 +333,43 @@ a:hover {
   from {opacity: .4}
   to {opacity: 1}
 }
+/*
+@media only screen and (min-width: 769px) {
+
+  .wrapper{
+
+    grid-template-areas: 'navbar''escudo''header'
+                        'main' 'main' 'aside'
+                        'footer' 'footer' 'footer';
+  }
+}*/
 
 @media screen and (max-width: 768px){
 
   .wrapper {
 
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 9fr 5fr 5fr;
-    column-rule-color: rgb(4, 95, 4) yellow rgb(53, 1, 33);
-    gap: 0px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 2fr 5fr 0.5fr;                 
+    grid-template-areas: 'navbar'
+                        'main'
+                        'aside'
+                        'footer';
   }
-  .escudo{
+
+  .wrapper_galeria {
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-areas: 'navbar'
+                        'slideshow-container'
+                        'footer';
+  }
   
-    padding-left: 250px;
-    background-size: contain;
-    background-image: url(images/quindianos_escudo_reducido3.png);
-    text-align: center;
+  .sticky{
+
+    position: static;
   }
 
   .main {
@@ -330,23 +377,24 @@ a:hover {
     display: flex;
     flex-wrap: wrap;
     background: url(images/quindianos_9.jpeg);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
-    grid-column: 1/3;
-    width: 100%;
-    height: 100%;
     position:relative;
-    border-radius: 20px;
-  
   }
 
-  .aside{
-    grid-row: 3;
-    grid-column: 1/3;
-  }
 }
 
 @media screen and (max-width: 480px){
   
-  
+  .wrapper {
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 5fr 2fr 0.5fr;                 
+    grid-template-areas: 'navbar'
+                        'aside'
+                        'main'
+                        'footer';
+  }
+
 }
