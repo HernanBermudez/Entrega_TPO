@@ -191,6 +191,7 @@ html,body,header,menu,footer{
   height: 100%;
 }
 
+/*
 .tablasub20{
   
   display: flexbox;
@@ -209,12 +210,12 @@ html,body,header,menu,footer{
   background-size: contain;
   position:static;
   margin: auto;
-  transition: transform .2s; /* Animation */
+  transition: transform .2s; /* Animation 
 
 }
 
 .tablasub17:hover {
-  transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) 
 }
 
 .escudo_quindianos_marcador{
@@ -241,6 +242,8 @@ html,body,header,menu,footer{
   min-height: 150px;
   background-repeat: no-repeat;
 }
+
+*/
 
 .footer{
 
