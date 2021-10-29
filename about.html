@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">  
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <title>Contacto</title>
 </head>
 <body>
@@ -51,6 +51,42 @@
         <div class="aside_about">
             <div style="width: 100%"><iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q=quindianos%20cd+(Quindianos%20Club%20Deportivo)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.mapsdirections.info/marcar-radio-circulo-mapa/">Dibujar radio en el mapa</a></iframe></div>
         </div>
+        <div></div>
+        <form>
+            <p>
+              <fieldset>
+                <legend>¿Te gustaría hacer parte de Quindianos C.D.?<abbr title="Este campo es obligatorio" aria-label="required">*</abbr></legend>
+                <!-- Solo se puede seleccionar un botón de opción en un grupo con el mismo nombre,
+                     y, por lo tanto, solo un botón de opción en un grupo con el mismo nombre que tiene marcado el atributo «requerido»
+                     basta para hacer de una selección un requisito -->
+                <input type="radio" required name="driver" id="r1" value="yes"><label for="r1">Sí</label>
+                <input type="radio" required name="driver" id="r2" value="no"><label for="r2">No</label>
+              </fieldset>
+            </p>
+            <p>
+              <label for="n1">¿Qué edad tienes?</label>
+              <!-- El atributo pattern puede actuar como una alternativa para los navegadores que
+                   no implementan el tipo de entrada de número, pero admiten el atributo pattern.
+                   Ten en cuenta que los navegadores que admiten el atributo pattern lo harán
+                   fallar silenciosamente cuando se use con un campo numérico.
+                   Su uso aquí solo actúa como una alternativa -->
+               <input type="number" min="4" max="20" step="1" id="n1" name="age"
+                     pattern="\d+">
+            </p>
+
+            <p>
+              <label for="t2">¿Cuál es tu dirección de correo electrónico? </label>
+              <input type="email" id="t2" name="email">
+            </p>
+            <p>
+              <label for="t3">Deja un mensaje</label>
+              <textarea id="t3" name="msg" maxlength="140" rows="5"></textarea>
+            </p>
+            <p>
+
+              <button class="button button1">Enviar</button>
+            </p>
+        </form>
         <div class="footer">
             <ul class="social_links">
 
