@@ -429,7 +429,7 @@ a:hover {
 
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.3fr 3fr 2fr 0.3fr;                 
+    grid-template-rows: 0.35fr 3fr 2fr 0.2fr;                 
   }
 
   .wrapper_galeria {
