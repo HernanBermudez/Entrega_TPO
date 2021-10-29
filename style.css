@@ -105,17 +105,18 @@ html,body,header,menu,footer{
 
 .main_about{
 
-  padding: 20px;
-  text-align:justify;
   display: flex;
   flex-wrap: wrap;
+  padding: 20px;
   grid-column: 1/3;
+  text-align:justify;
   font-size: xx-large;
   width: 100%;
   height: 100%;
   border-style:solid;
   border-color: black;
   background-color: rgb(119, 8, 76);
+  position:static;
   margin: auto;
   border-radius: 20px;
 
