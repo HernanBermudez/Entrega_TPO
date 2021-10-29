@@ -402,7 +402,7 @@ a:hover {
 
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.3fr 5fr 3fr 0.3fr; 
+    grid-template-rows: 0.25fr 5fr 2fr 0.25fr; 
   }
 
   .escudo{
