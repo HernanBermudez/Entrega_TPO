@@ -454,6 +454,7 @@ a:hover {
   #navbar{
    
     grid-column: 1/3;
+    border-radius: 20px;
    
   }
   .sticky{
