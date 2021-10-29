@@ -10,8 +10,8 @@ html,body,header,menu,footer, form{
 @keyframes animation_main { /* Animación*/
 
   0% {background-image: url(images/quindianos_10.jpeg);}
-  40% {background-image: url(images/quindianos_11.jpeg);}
-  70% {background-image: url(images/quindianos_9.jpeg);}
+  50% {background-image: url(images/quindianos_11.jpeg);}
+  100% {background-image: url(images/quindianos_9.jpeg);}
 
 }
 
@@ -96,7 +96,7 @@ html,body,header,menu,footer, form{
   border-style:solid;
   border-color: black;
   animation-name: animation_main;
-  animation-duration: 10s;
+  animation-duration: 15s;
   position:static;
   margin: auto;
   border-radius: 20px;
