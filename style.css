@@ -454,7 +454,7 @@ a:hover {
 
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.4fr 5fr 0.4fr;
+    grid-template-rows: 0.45fr 5fr 0.45fr;
   }
 
   .wrapper_about {
