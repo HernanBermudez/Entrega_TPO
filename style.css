@@ -461,7 +461,7 @@ a:hover {
 
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.12fr 2fr 1fr 0.12fr; 
+    grid-template-rows: 0.1fr 2fr 1.6fr 0.1fr; 
   }
 
   .escudo{
