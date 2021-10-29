@@ -464,7 +464,7 @@ a:hover {
 
     grid-column: 1/4;
     background: url(images/quindianos_9.jpeg);
-    background-size: contain;
+    background-size: auto;
     background-repeat: no-repeat;
     position:relative;
     border-radius: 20px;
