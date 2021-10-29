@@ -33,7 +33,7 @@ html,body,header,menu,footer{
 
   display: grid;
   grid-template-columns: 4fr 2fr 4fr;
-  grid-template-rows: 1fr 14fr 2fr;
+  grid-template-rows: 0.35fr 3fr 0.35fr;
 }
 
 #navbar {
@@ -402,7 +402,7 @@ a:hover {
 
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.25fr 5fr 2fr 0.25fr; 
+    grid-template-rows: 0.4fr 4fr 3fr 0.4fr; 
   }
 
   .escudo{
