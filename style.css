@@ -7,13 +7,15 @@ html,body,header,menu,footer, form{
   margin: 0px;
 }
 
-@keyframes animation_main { /* Animación*/
+@keyframes animation_main { /* Animación en página de inicio en main, transición de imagenes*/
 
   0% {background-image: url(images/quindianos_10.jpeg);}
   50% {background-image: url(images/quindianos_11.jpeg);}
   100% {background-image: url(images/quindianos_9.jpeg);}
 
 }
+
+/*Contenedor de Inicio*/
 
 .wrapper {
 
@@ -22,12 +24,16 @@ html,body,header,menu,footer, form{
   grid-template-rows: 1fr 10fr 2fr;
 }
 
+/*Contenedor de galeria*/
+
 .wrapper_galeria {
 
   display: grid;
   grid-template-columns: 4fr 2fr 4fr;
   grid-template-rows: 1.04fr 10fr 2fr;
 }
+
+/*Contenedor de about*/
 
 .wrapper_about {
 
@@ -36,12 +42,16 @@ html,body,header,menu,footer, form{
   grid-template-rows: 0.17fr 1.5fr 0.5fr 0.17fr;
 }
 
+/*Barra de navegacion sticky, contiene los links a las paginas*/
+
 #navbar {
   padding: 15px;
   overflow: hidden;
   background-color: white;
 
 }
+
+/*Estilo de la barra de nav*/
 
 #navbar a {
   padding: 10px;
@@ -56,6 +66,8 @@ html,body,header,menu,footer, form{
 	top: 0;
 }
 
+/*Cambio de color al poner el mouse encima de un link*/
+
 #navbar a:hover {
   background-color: rgb(119, 8, 76);
   position: -webkit-sticky;
@@ -63,11 +75,7 @@ html,body,header,menu,footer, form{
 	top: 0;
 }
 
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
+/*Parte del header*/
 
 .header{
  
@@ -81,6 +89,8 @@ html,body,header,menu,footer, form{
   border-bottom: #1a2434;
   /*border-radius: 20px;*/
 }
+
+/*Main de Inicio*/
 
 .main {
 
@@ -122,11 +132,15 @@ html,body,header,menu,footer, form{
 
 }
 
+/*Propiedad sticky para tener navbar siempre en la pantalla*/
+
 .sticky {
 	position: -webkit-sticky;
 	position: sticky;
 	top: 0;
 }
+
+/*Escudo ubicado en la barra de navegacion sticky*/
 
 .escudo{
  
@@ -143,6 +157,8 @@ html,body,header,menu,footer, form{
 	position: sticky;
 	top: 0;
 }
+
+/*Aside de Inicio*/
 
 .aside{
 
@@ -172,6 +188,8 @@ html,body,header,menu,footer, form{
 
 }
 
+/*Clase para ubicar los videos de Inicio*/
+
 .video-responsive {
   position:relative;
   padding-bottom: 56.25%; /* 16/9 ratio */
@@ -181,6 +199,8 @@ html,body,header,menu,footer, form{
 
   
   }
+
+  /*Posición y tamaño de los videos*/
 
 .video-responsive iframe,
 .video-responsive object,
@@ -221,6 +241,8 @@ input:invalid {
 input:focus:invalid {
   box-shadow: none;
 }
+
+/*Estilo boton de Enviar en formuario*/
 
 .button {
   border: none;
@@ -332,7 +354,6 @@ a:hover {
   flex-wrap: wrap;
   grid-row: 2/3;
   grid-column: 1/4;
-  /*max-width: 1000px;*/
   position:static;
   margin: auto;
   background-size: contain;
@@ -340,54 +361,14 @@ a:hover {
   border-color: #1a2434;
 }
 
-/* Hide the images by default */
+/* Esconder imagenes por default */
 .mySlides {
   display: none;
   background-size: auto;
 }
 
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  right: 10%;
-  width: auto;
-  margin-top: 100px;
-  margin-right: 320px;
-  padding: 16px;
+/* Los puntos para cambiar de imagen en galeria */
 
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
   height: 15px;
@@ -398,6 +379,8 @@ a:hover {
   display: inline-block;
   transition: background-color 0.6s ease;
 }
+
+/* Cambio de color de los puntos al poner el mouse encima */
 
 .active, .dot:hover {
   background-color: #717171;
@@ -420,6 +403,8 @@ a:hover {
   from {opacity: .4}
   to {opacity: 1}
 }
+
+/*Responsive en tablets*/
 
 @media screen and (max-width: 768px){
 
@@ -469,6 +454,7 @@ a:hover {
    
   }
 
+  /*Quitamos sticky para estos dispositivos*/
   .sticky{
 
     position: static;
@@ -496,6 +482,8 @@ a:hover {
   }
 
 }
+
+/*Responsive en celulares*/
 
 @media screen and (max-width: 480px){
   
@@ -548,6 +536,9 @@ a:hover {
     border-radius: 20px;
    
   }
+
+  /*Quitamos sticky para estos dispositivos*/
+  
   .sticky{
 
     position: static;
